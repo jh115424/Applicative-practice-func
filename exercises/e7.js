@@ -4,8 +4,16 @@ import { data } from "../data/data";
 // Return an array of all Planets names that have moons
 // Return example: ['name1', 'name2', ... , 'nameN']
 
+const moonNames = []
+
 export function getPlanetsNamesWithMoons(data) {
   // Your code goes here...
+return data.planets
+.filter((planet) => planet.moonsCount)
+.map((planet) => planet.name);
+
+
+
 }
 
 

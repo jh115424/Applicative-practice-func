@@ -5,9 +5,25 @@ import { data } from "../data/data";
 // include planets with 0 moons
 // Return example: ['name1', 'name2', ... , 'nameN']
 
+
+
 export function lowMoonsPlanets(data) {
-  // Your code goes here...
+
+
+
+
+
+
+  return data.planets
+  .filter((planet) => planet.moonsCount < 10 || planet.moonsCount === undefined)
+  .map((planet) => planet.name);
+
+
+
+
+
 }
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-11"
